@@ -57,3 +57,20 @@
   transition: 0.3s;
 
 }
+
+
+@media only screen and (max-width: 600px) {
+
+  .container {
+    width: 95vw;
+  }
+
+  .left {
+    width: 70%;
+  }
+
+  .right {
+    width: 30%;
+  }
+
+} 

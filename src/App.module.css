@@ -1,12 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:800i&display=swap");
 
 .app {
-  min-height: 110vh;
-  width: 100vw;
   background-image: linear-gradient(to bottom right, red, yellow);
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .landing {
@@ -58,19 +57,26 @@
 }
 
 .projectsContainer {
-  margin: 0 auto; 
+  margin: 0 auto;
   align-items: center;
 }
 
 ul {
-  padding:0;
+  padding: 0;
   margin: 0;
 }
 
 @media screen and (max-width:80rem) { .projectsContainer { width: 35rem; } }
-@media screen and (min-width: 80rem) and (max-width: 110rem) { .projectsContainer { width: 64rem; } }
-@media screen and (min-width: 120rem) and (max-width: 130rem) { .projectsContainer { width: 96rem;  } }
-
+@media screen and (min-width: 80rem) and (max-width: 110rem) {
+  .projectsContainer {
+    width: 64rem;
+  }
+}
+@media screen and (min-width: 120rem) and (max-width: 130rem) {
+  .projectsContainer {
+    width: 96rem;
+  }
+}
 
 .projectContainer {
   display: inline-block;
@@ -117,4 +123,21 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .projectsContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .projectContainer {
+    margin: 0 0 1rem 0;
+  }
+
+  .header {
+    background-color: black;
+  }
 }
