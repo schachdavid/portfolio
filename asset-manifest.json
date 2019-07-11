@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.d6310c79.chunk.css",
-    "main.js": "/portfolio/static/js/main.d24300a3.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.d24300a3.chunk.js.map",
-    "runtime~main.js": "/portfolio/static/js/runtime~main.f308c8e6.js",
-    "runtime~main.js.map": "/portfolio/static/js/runtime~main.f308c8e6.js.map",
-    "static/js/2.2c7cd9af.chunk.js": "/portfolio/static/js/2.2c7cd9af.chunk.js",
-    "static/js/2.2c7cd9af.chunk.js.map": "/portfolio/static/js/2.2c7cd9af.chunk.js.map",
-    "index.html": "/portfolio/index.html",
-    "precache-manifest.fb435f5ca0e33082678b54df5836d891.js": "/portfolio/precache-manifest.fb435f5ca0e33082678b54df5836d891.js",
-    "service-worker.js": "/portfolio/service-worker.js",
-    "static/css/main.d6310c79.chunk.css.map": "/portfolio/static/css/main.d6310c79.chunk.css.map",
-    "static/media/decision_maker.png": "/portfolio/static/media/decision_maker.cf620293.png",
-    "static/media/happy2help.PNG": "/portfolio/static/media/happy2help.f3cf6f75.PNG"
+    "main.css": "/static/css/main.d6310c79.chunk.css",
+    "main.js": "/static/js/main.236d55fe.chunk.js",
+    "main.js.map": "/static/js/main.236d55fe.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.2c7cd9af.chunk.js": "/static/js/2.2c7cd9af.chunk.js",
+    "static/js/2.2c7cd9af.chunk.js.map": "/static/js/2.2c7cd9af.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.7d90e321f667fb6164d9837803b590a0.js": "/precache-manifest.7d90e321f667fb6164d9837803b590a0.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.d6310c79.chunk.css.map": "/static/css/main.d6310c79.chunk.css.map",
+    "static/media/decision_maker.png": "/static/media/decision_maker.cf620293.png",
+    "static/media/happy2help.PNG": "/static/media/happy2help.f3cf6f75.PNG"
   }
 }
