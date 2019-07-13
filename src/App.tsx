@@ -90,20 +90,23 @@ const App: React.FC = () => {
         <li className={styles.projectContainer}>
           <Project
             title="Happy 2 Help"
-            description="  A React Native app which helps helps people to volunteer."
+            description="An app which helps helps people to volunteer."
             codeUrl="https://github.com/saefty/happy2help_app"
             demoUrl="https://github.com/saefty/happy2help_app/blob/master/readme_assets/demo.gif"
             img={imgHappy2Help}
+            labels={["React Native", "GraphQL", "Django"]}
+
           />
         </li>
         <li className={styles.projectContainer}>
           <Project
             title="Decision Maker"
-            description="  A simple flutter app which helps you to make the best decision
+            description="An app which helps you to make the best decision
             possible."
             codeUrl="https://github.com/schachdavid/decision-maker"
             demoUrl="https://github.com/schachdavid/decision-maker"
             img={imgDecisionMaker}
+            labels={["Flutter", "Dart", "SQlite"]}
           />
         </li>
         <li className={styles.projectContainer}>
@@ -113,6 +116,7 @@ const App: React.FC = () => {
             codeUrl="https://github.com/schachdavid/decision-maker"
             demoUrl="https://github.com/schachdavid/decision-maker"
             img="https://github.com/schachdavid/decision-maker"
+            labels={[]}
           />
         </li>
       </ul>
