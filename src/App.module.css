@@ -1,15 +1,20 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:800i&display=swap");
-
 .app {
-  background-image: linear-gradient(to bottom right, red, yellow);
+  /* background-image: linear-gradient(to bottom right, red, yellow); */
+  background-image: linear-gradient(to bottom right, red, rgb(30, 45, 126));
+
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
 }
 
+.navigation {
+  position: absolute;
+  margin: auto;
+}
+
 .landing {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--primary-font), sans-serif;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -17,7 +22,8 @@
 
 .titleTextContainer {
   color: white;
-
+  max-width: 25rem;
+  text-align: center;
   font-style: italic;
 }
 
@@ -27,6 +33,12 @@
 
 .subTitle {
   font-size: 1.5rem;
+}
+
+.description {
+  margin-top: 2rem;
+  font-family: var(--secondary-font), sans-serif;
+  font-style: normal;
 }
 
 .landing:before {
@@ -40,7 +52,6 @@
   height: 5rem;
   color: white;
   margin-top: auto;
-  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,8 +63,11 @@
   margin: 0.3rem;
 }
 
-.downText {
-  font-size: 1.5rem;
+.projectsHeadline {
+  font-size: 3rem;
+  font-family: var(--primary-font), sans-serif;
+  color: white;
+  margin-bottom: 2rem;
 }
 
 .projectsContainer {
@@ -66,7 +80,11 @@ ul {
   margin: 0;
 }
 
-@media screen and (max-width:80rem) { .projectsContainer { width: 35rem; } }
+@media screen and (max-width: 80rem) {
+  .projectsContainer {
+    width: 35rem;
+  }
+}
 @media screen and (min-width: 80rem) and (max-width: 110rem) {
   .projectsContainer {
     width: 64rem;
@@ -83,27 +101,14 @@ ul {
   margin: 1rem;
 }
 
-.header {
+.socialBanner {
   position: fixed;
-  color: white;
-  font-size: 1.8rem;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.leftHeader {
-  left: 0;
-  margin: 1rem;
-  display: flex;
-  align-items: center;
-}
-
-.rightHeader {
   right: 0;
-  margin: 1rem;
-  display: flex;
-  align-items: center;
+  top: 20vh;
+}
+
+.header {
+  display: none;
 }
 
 .icon {
@@ -112,7 +117,7 @@ ul {
 
 .cvIcon {
   margin: 0.3rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--primary-font), sans-serif;
 }
 
 .header a {
@@ -125,7 +130,38 @@ a {
   text-decoration: none;
 }
 
+.contactMeButton {
+  display: flex;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.contactMeButton span {
+  margin-left: 0.5rem;
+}
+
+.button {
+  align-self: center;
+  border: 0.1rem solid white;
+  color: white;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  font-family: var(--primary-font), sans-serif;
+  background-color: rgba(255, 255, 255, 0.26);
+
+  font-size: 1.5rem;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.411);
+  color: white;
+  transition: 0.3s;
+}
+
 @media only screen and (max-width: 600px) {
+
+
   .projectsContainer {
     width: 100%;
     display: flex;
@@ -137,7 +173,31 @@ a {
     margin: 0 0 1rem 0;
   }
 
+  .socialBanner {
+    display: none;
+  }
+
   .header {
+    position: fixed;
+    color: white;
+    font-size: 1.8rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     background-color: black;
+  }
+
+  .leftHeader {
+    left: 0;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .rightHeader {
+    right: 0;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
   }
 }

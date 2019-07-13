@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "./logo.svg";
 import styles from "./Project.module.css";
-import ButtonLink from "../ButtonLink/ButtonLink";
 
 
 interface IProps {
@@ -24,12 +23,13 @@ const Project: React.FC<IProps> = (props) => {
             {props.description}
           </p>     
         </div>
-        <ButtonLink href={props.codeUrl}>{"<CODE/>"}</ButtonLink>
+
+        <a href={props.codeUrl} className={styles.button}>{"<CODE/>"}</a>
       </div>
 
       <div className={styles.right} style={{backgroundImage: `url(${props.img})`}}>
         <div className={styles.rightContent}>
-          <ButtonLink href={props.demoUrl}>DEMO</ButtonLink>
+          <a href={props.demoUrl} className={styles.button}>DEMO</a>
         </div>
       </div>
     </div>

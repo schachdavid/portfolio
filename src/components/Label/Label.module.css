@@ -1,0 +1,77 @@
+.container {
+    background-color: white;
+    border-radius: 2rem;
+    width: 30rem;
+    height: 25rem;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .right {
+    width: 50%;
+    background-color: rgb(236, 236, 236);
+    border-radius: 0 2rem 2rem 0;
+    height: 100%;
+    /* background-image: url(https://tubikstudio.com/wp-content/uploads/2018/10/user-interface-design-mobile-app-bitex.png); */
+    background-size: cover;
+  }
+  
+  .rightContent {
+    display: flex;
+    border-radius: 0 2rem 2rem 0;
+    flex-direction: column;
+    background-color: rgba(182, 181, 147, 0.356);
+    width: 100%;
+    height: 100%;
+  }
+  
+  .textContainer {
+    padding: 2rem;
+  }
+  
+  .button {
+    align-self: center;
+    margin: auto;
+    margin-bottom: 2rem;
+    border: 0.1rem solid black;
+    background-color: white;
+    color: black;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    border-color: black;
+    border-radius: 0.7rem;
+    font-family: var(--primary-font), sans-serif;
+    font-size: 0.9rem;
+  }
+  
+  .button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+  
+  }
+  
+  
+  @media only screen and (max-width: 600px) {
+  
+    .container {
+      width: 95vw;
+    }
+  
+    .left {
+      width: 70%;
+    }
+  
+    .right {
+      width: 30%;
+    }
+  
+  } 
+  

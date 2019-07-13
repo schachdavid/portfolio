@@ -19,7 +19,6 @@
   background-color: rgb(236, 236, 236);
   border-radius: 0 2rem 2rem 0;
   height: 100%;
-  /* background-image: url(https://tubikstudio.com/wp-content/uploads/2018/10/user-interface-design-mobile-app-bitex.png); */
   background-size: cover;
 }
 
@@ -36,27 +35,6 @@
   padding: 2rem;
 }
 
-.button {
-  align-self: center;
-  margin: auto;
-  margin-bottom: 2rem;
-  border: 0.1rem solid black;
-  background-color: white;
-  color: black;
-  padding: 0.7rem 1rem;
-  cursor: pointer;
-  border-color: black;
-  border-radius: 0.7rem;
-  font-family: "Open Sans", sans-serif;
-  font-size: 0.9rem;
-}
-
-.button:hover {
-  background-color: black;
-  color: white;
-  transition: 0.3s;
-
-}
 
 
 @media only screen and (max-width: 600px) {

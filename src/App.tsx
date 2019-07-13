@@ -2,15 +2,20 @@ import React from "react";
 import logo from "./logo.svg";
 import styles from "./App.module.css";
 import Project from "./components/Project/Project";
+
+import classnames from "classnames";
 import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
-  FaChevronDown
+  FaChevronDown,
+  FaRocket
 } from "react-icons/fa";
+import Navigation from "./components/Navigation/Navigation";
+import SocialBanner from "./components/SocialBanner/SocialBanner";
 const App: React.FC = () => {
   let projectsHeadline: any = null;
-  const onScrollClick = () => {
+  const scrollToProjects = () => {
     window.scrollTo({
       behavior: "smooth",
       left: 0,
@@ -18,13 +23,24 @@ const App: React.FC = () => {
     });
   };
 
+  const scrollToContactMe = () => {
+    window.scrollTo({
+      behavior: "smooth",
+      left: 0,
+      top: 9999
+    });
+  };
+
   const imgHappy2Help = require("./images/happy2help.PNG");
   const imgDecisionMaker = require("./images/decision_maker.png");
 
-
-
   return (
     <div className={styles.app}>
+      <div className={styles.socialBanner}>
+      <SocialBanner />
+
+
+      </div>
       <div className={styles.header}>
         <div className={styles.leftHeader}>
           <a href="mailto:schachdavid@web.de">
@@ -43,25 +59,33 @@ const App: React.FC = () => {
           </a>
         </div>
       </div>
+      <div className={styles.navigation}>
+      <Navigation scrollToProjects={scrollToProjects} scrollToContactMe={scrollToContactMe} />
+
+        </div>
+
       <div className={styles.landing}>
         <div className={styles.titleTextContainer}>
           <div className={styles.title}>DAVID SCHACH</div>
           <div className={styles.subTitle}>FULL STACK DEVELOPER</div>
+          <div className={styles.description}>
+            <div>Passionate software developer</div>
+            <div>currently studying media and computer science</div>
+          </div>
         </div>
 
-        <a className={styles.scrollDown} onClick={onScrollClick}>
+        <a className={styles.scrollDown} onClick={scrollToProjects}>
           <FaChevronDown className={styles.downIcon} />
-          <div
-            ref={ph => {
-              projectsHeadline = ph;
-            }}
-            className={styles.downText}
-          >
-            Projects
-          </div>
         </a>
       </div>
-
+      <div
+        ref={ph => {
+          projectsHeadline = ph;
+        }}
+        className={styles.projectsHeadline}
+      >
+        PROJECTS
+      </div>
       <ul className={styles.projectsContainer}>
         <li className={styles.projectContainer}>
           <Project
@@ -92,6 +116,13 @@ const App: React.FC = () => {
           />
         </li>
       </ul>
+      <a
+        href="mailto:schachdavid@web.de"
+        className={classnames(styles.button, styles.contactMeButton)}
+      >
+        <FaRocket />
+        <span>CONTACT ME</span>
+      </a>
     </div>
   );
 };
