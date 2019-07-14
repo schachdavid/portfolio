@@ -70,7 +70,7 @@ const App: React.FC = () => {
           <div className={styles.subTitle}>FULL STACK DEVELOPER</div>
           <div className={styles.description}>
             <div>Passionate software developer</div>
-            <div>currently studying media and computer science</div>
+            <div>currently studying computer science in media</div>
           </div>
         </div>
 
