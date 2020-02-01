@@ -4,18 +4,14 @@
 
 .container ul {
   margin-top: 2rem;
-
   letter-spacing: 0.4rem;
   width: 50rem;
   max-width: 80vw;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  color: white;
+  color: rgb(29, 29, 29);
   font-family: var(--primary-font), sans-serif;
-
   list-style: none;
 }
 
@@ -26,11 +22,13 @@
 }
 
 .about {
-  border-bottom: 0.1rem solid white;
+  border-bottom: 0.1rem solid rgb(29, 29, 29);
 }
-
 
 .container a:hover {
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.747);
+  background-image: linear-gradient(to bottom right, red, rgb(30, 45, 126));
+  background-clip: text; 
+  color:transparent;
+  transition: 0.3s;
 }

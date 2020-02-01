@@ -1,6 +1,5 @@
 .container {
-
-  border-radius: 1rem 0 0 1rem;
+  border-radius: 0.2rem 0 0 0.2rem;
   border: 0.1rem solid white;
   border-right-width: 0;
   display: flex;
@@ -10,8 +9,12 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-size: 2rem;
   padding: 0.5rem;
-  color: white;
+  color: rgb(29, 29, 29);
   font-family: var(--primary-font), sans-serif;
-  background-color: rgba(255, 255, 255, 0.15);
+}
 
+a:hover {
+  cursor: pointer;
+  color: rgb(88, 88, 88);
+  transition: 0.3s;
 }

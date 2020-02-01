@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import styles from "./Project.module.css";
 import ButtonLink from "../ButtonLink/ButtonLink";
 import Label from "../Label/Label";
+import { FiCode, FiExternalLink } from "react-icons/fi";
 
 interface IProps {
   title: string;
@@ -26,7 +27,15 @@ const Project: React.FC<IProps> = props => {
           <p>{props.description}</p>
           <div className={styles.labelContainer}>{labels}</div>
         </div>
-        <ButtonLink href={props.codeUrl}>{"<CODE/>"}</ButtonLink>
+        {/* <ButtonLink href={props.codeUrl}>{"<CODE/>"}</ButtonLink> */}
+        <div className={styles.actions}>
+          <a href={props.codeUrl}>
+            <FiCode strokeWidth="1.2" className={styles.icon} />
+          </a>{" "}
+          <a href={props.demoUrl}>
+            <FiExternalLink strokeWidth="1.2" className={styles.icon} />
+          </a>
+        </div>
       </div>
 
       <div
@@ -34,7 +43,7 @@ const Project: React.FC<IProps> = props => {
         style={{ backgroundImage: `url(${props.img})` }}
       >
         <div className={styles.rightContent}>
-          <ButtonLink href={props.demoUrl}>DEMO</ButtonLink>
+          {/* <ButtonLink href={props.demoUrl}>DEMO</ButtonLink> */}
         </div>
       </div>
     </div>

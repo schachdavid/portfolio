@@ -11,8 +11,11 @@ import {
   FaChevronDown,
   FaRocket
 } from "react-icons/fa";
+import { FiChevronDown, FiMessageSquare, FiMail } from "react-icons/fi";
+
 import Navigation from "./components/Navigation/Navigation";
 import SocialBanner from "./components/SocialBanner/SocialBanner";
+import classNames from "classnames";
 const App: React.FC = () => {
   let projectsHeadline: any = null;
   const scrollToProjects = () => {
@@ -37,20 +40,15 @@ const App: React.FC = () => {
   return (
     <div className={styles.app}>
       <div className={styles.socialBanner}>
-      <SocialBanner />
-
-
+        <SocialBanner />
       </div>
       <div className={styles.header}>
-        <div className={styles.leftHeader}>
-          <a href="mailto:schachdavid@web.de">
-            <FaEnvelope className={styles.icon} />
-          </a>
-
-          <span className={styles.cvIcon}>CV</span>
-        </div>
+        <div className={styles.leftHeader}></div>
 
         <div className={styles.rightHeader}>
+          <a href="mailto:schachdavid@web.de">
+            <FiMessageSquare className={styles.icon} />
+          </a>
           <a href="https://github.com/schachdavid">
             <FaGithub className={styles.icon} />
           </a>
@@ -60,14 +58,16 @@ const App: React.FC = () => {
         </div>
       </div>
       <div className={styles.navigation}>
-      <Navigation scrollToProjects={scrollToProjects} scrollToContactMe={scrollToContactMe} />
-
-        </div>
+        <Navigation
+          scrollToProjects={scrollToProjects}
+          scrollToContactMe={scrollToContactMe}
+        />
+      </div>
 
       <div className={styles.landing}>
         <div className={styles.titleTextContainer}>
-          <div className={styles.title}>DAVID SCHACH</div>
-          <div className={styles.subTitle}>FULL STACK DEVELOPER</div>
+          <h1 className={styles.title}>DAVID SCHACH</h1>
+          <h2 className={styles.subTitle}>FULL STACK DEVELOPER</h2>
           <div className={styles.description}>
             <div>Passionate software developer</div>
             <div>currently studying computer science in media</div>
@@ -75,17 +75,19 @@ const App: React.FC = () => {
         </div>
 
         <a className={styles.scrollDown} onClick={scrollToProjects}>
-          <FaChevronDown className={styles.downIcon} />
+          <span className={styles.iconStrokeWidthContainer}>
+            <FiChevronDown className={styles.downIcon} />
+          </span>
         </a>
       </div>
-      <div
+      <h2
         ref={ph => {
           projectsHeadline = ph;
         }}
-        className={styles.projectsHeadline}
+        className={classNames(styles.projectsHeadline, styles.title)}
       >
         PROJECTS
-      </div>
+      </h2>
       <ul className={styles.projectsContainer}>
         <li className={styles.projectContainer}>
           <Project
@@ -95,7 +97,6 @@ const App: React.FC = () => {
             demoUrl="https://github.com/saefty/happy2help_app/blob/master/readme_assets/demo.gif"
             img={imgHappy2Help}
             labels={["React Native", "GraphQL", "Django"]}
-
           />
         </li>
         <li className={styles.projectContainer}>
@@ -124,7 +125,7 @@ const App: React.FC = () => {
         href="mailto:schachdavid@web.de"
         className={classnames(styles.button, styles.contactMeButton)}
       >
-        <FaRocket />
+        <FiMail />
         <span>CONTACT ME</span>
       </a>
     </div>
