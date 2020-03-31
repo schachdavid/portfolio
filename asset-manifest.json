@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.101fd8e9.chunk.css",
+    "main.css": "/static/css/main.3b22ce71.chunk.css",
     "main.js": "/static/js/main.f0ff3333.chunk.js",
     "main.js.map": "/static/js/main.f0ff3333.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
@@ -8,9 +8,9 @@
     "static/js/2.bb7a04a3.chunk.js": "/static/js/2.bb7a04a3.chunk.js",
     "static/js/2.bb7a04a3.chunk.js.map": "/static/js/2.bb7a04a3.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.a7eb5a0f1fed43c888337fc73a021e2f.js": "/precache-manifest.a7eb5a0f1fed43c888337fc73a021e2f.js",
+    "precache-manifest.5629eeba107f0d9ff355cd64bc8b9e34.js": "/precache-manifest.5629eeba107f0d9ff355cd64bc8b9e34.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.101fd8e9.chunk.css.map": "/static/css/main.101fd8e9.chunk.css.map",
+    "static/css/main.3b22ce71.chunk.css.map": "/static/css/main.3b22ce71.chunk.css.map",
     "static/media/background.svg": "/static/media/background.4456f5c4.svg",
     "static/media/decision_maker.png": "/static/media/decision_maker.cf620293.png",
     "static/media/happy2help.PNG": "/static/media/happy2help.f3cf6f75.PNG",
