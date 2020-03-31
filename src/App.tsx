@@ -1,19 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "./logo.svg";
 import styles from "./App.module.css";
 import Project from "./components/Project/Project";
 
-import classnames from "classnames";
+import AOS from "aos";
 
 import { FiLinkedin, FiMessageSquare, FiMail, FiGithub } from "react-icons/fi";
 
 import classNames from "classnames";
 import ButtonLink from "./components/ButtonLink/ButtonLink";
 const App: React.FC = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
+
   const imgHappy2Help = require("./images/happy2help.PNG");
   const imgDecisionMaker = require("./images/decision_maker.png");
   const sketchSvg = require("./images/svgs/sketch.svg");
   const backgroundSvg = require("./images/svgs/background.svg");
+
+
+
 
   return (
     <div className={styles.app}>
@@ -68,7 +77,7 @@ const App: React.FC = () => {
       <h2 className={classNames(styles.projectsHeadline, styles.title)}>
         Projects
       </h2>
-      <ul className={styles.projectsContainer}>
+      <ul className={styles.projectsContainer} data-aos="fade-left">
         <li className={styles.projectContainer}>
           <Project
             title="Happy 2 Help"
@@ -101,7 +110,7 @@ const App: React.FC = () => {
           />
         </li>
       </ul>
-      <footer className={styles.footer}>
+      <footer className={styles.footer} data-aos="fade-up">
         Got Interested? Get in Touch with Me:
         <div className={styles.socialMediaFooter}>
         <a
