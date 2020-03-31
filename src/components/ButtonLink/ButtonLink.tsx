@@ -2,16 +2,15 @@ import React from "react";
 import logo from "./logo.svg";
 import styles from "./ButtonLink.module.css";
 
-
 interface IProps {
-  href: string 
+  href: string;
 }
 
-
-const ButtonLink: React.FC<IProps> = (props) => {
-
+const ButtonLink: React.FC<IProps> = props => {
   return (
-    <a href={props.href} className={styles.button}>{props.children}</a>
+    <a href={props.href}>
+      <div className={styles.button}>{props.children}</div>
+    </a>
   );
 };
 

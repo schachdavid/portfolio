@@ -27,12 +27,12 @@ const Project: React.FC<IProps> = props => {
           <p>{props.description}</p>
           <div className={styles.labelContainer}>{labels}</div>
         </div>
-        {/* <ButtonLink href={props.codeUrl}>{"<CODE/>"}</ButtonLink> */}
         <div className={styles.actions}>
-          <a href={props.codeUrl}>
+          <a href={props.codeUrl} aria-label="View Code for this Project">
+          
             <FiCode strokeWidth="1.2" className={styles.icon} />
-          </a>{" "}
-          <a href={props.demoUrl}>
+          </a>
+          <a href={props.demoUrl} aria-label="View a Demo for this Project">
             <FiExternalLink strokeWidth="1.2" className={styles.icon} />
           </a>
         </div>
@@ -43,7 +43,6 @@ const Project: React.FC<IProps> = props => {
         style={{ backgroundImage: `url(${props.img})` }}
       >
         <div className={styles.rightContent}>
-          {/* <ButtonLink href={props.demoUrl}>DEMO</ButtonLink> */}
         </div>
       </div>
     </div>

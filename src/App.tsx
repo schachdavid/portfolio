@@ -4,89 +4,69 @@ import styles from "./App.module.css";
 import Project from "./components/Project/Project";
 
 import classnames from "classnames";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-  FaChevronDown,
-  FaRocket
-} from "react-icons/fa";
-import { FiChevronDown, FiMessageSquare, FiMail } from "react-icons/fi";
 
-import Navigation from "./components/Navigation/Navigation";
-import SocialBanner from "./components/SocialBanner/SocialBanner";
+import { FiLinkedin, FiMessageSquare, FiMail, FiGithub } from "react-icons/fi";
+
 import classNames from "classnames";
+import ButtonLink from "./components/ButtonLink/ButtonLink";
 const App: React.FC = () => {
-  let projectsHeadline: any = null;
-  const scrollToProjects = () => {
-    window.scrollTo({
-      behavior: "smooth",
-      left: 0,
-      top: projectsHeadline.offsetTop
-    });
-  };
-
-  const scrollToContactMe = () => {
-    window.scrollTo({
-      behavior: "smooth",
-      left: 0,
-      top: 9999
-    });
-  };
-
   const imgHappy2Help = require("./images/happy2help.PNG");
   const imgDecisionMaker = require("./images/decision_maker.png");
+  const sketchSvg = require("./images/svgs/sketch.svg");
+  const backgroundSvg = require("./images/svgs/background.svg");
 
   return (
     <div className={styles.app}>
-      <div className={styles.socialBanner}>
-        <SocialBanner />
-      </div>
-      <div className={styles.header}>
-        <div className={styles.leftHeader}></div>
-
-        <div className={styles.rightHeader}>
-          <a href="mailto:schachdavid@web.de">
-            <FiMessageSquare className={styles.icon} />
-          </a>
-          <a href="https://github.com/schachdavid">
-            <FaGithub className={styles.icon} />
-          </a>
-          <a href="https://www.linkedin.com/in/david-schach-668a22137/">
-            <FaLinkedin className={styles.icon} />
-          </a>
-        </div>
-      </div>
-      <div className={styles.navigation}>
-        <Navigation
-          scrollToProjects={scrollToProjects}
-          scrollToContactMe={scrollToContactMe}
-        />
-      </div>
-
+      <header>
+        <a
+          href="mailto:schachdavid@web.de"
+          aria-label="Send an Email"
+        >
+          <FiMessageSquare className={styles.icon} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/david-schach-668a22137/"
+          aria-label="View LinkedIn Profile"
+        >
+          <FiLinkedin className={styles.icon} />
+        </a>
+        <a
+          href="https://github.com/schachdavid"
+          aria-label="View Github Profile"
+        >
+          <FiGithub className={styles.icon} />
+        </a>
+      </header>
       <div className={styles.landing}>
         <div className={styles.titleTextContainer}>
-          <h1 className={styles.title}>DAVID SCHACH</h1>
-          <h2 className={styles.subTitle}>FULL STACK DEVELOPER</h2>
+          <h1 className={styles.title}>David Schach</h1>
+          <h2 className={styles.subTitle}>Software Developer</h2>
           <div className={styles.description}>
-            <div>Passionate software developer</div>
-            <div>currently studying computer science in media</div>
+            Passionate software developer currently doing his masters in
+            computer science in media.
+          </div>
+          <div className={styles.buttonWrapper}>
+            <ButtonLink href="mailto:schachdavid@web.de">
+              Get In Touch
+            </ButtonLink>
           </div>
         </div>
+        <div className={styles.artworkContainer}>
+          <img
+            src={backgroundSvg}
+            className={styles.background}
+            alt="background"
+          ></img>
 
-        <a className={styles.scrollDown} onClick={scrollToProjects}>
-          <span className={styles.iconStrokeWidthContainer}>
-            <FiChevronDown className={styles.downIcon} />
-          </span>
-        </a>
+          <img
+            src={sketchSvg}
+            alt="Developer Self Portrait Sketch"
+            className={styles.sketch}
+          ></img>
+        </div>
       </div>
-      <h2
-        ref={ph => {
-          projectsHeadline = ph;
-        }}
-        className={classNames(styles.projectsHeadline, styles.title)}
-      >
-        PROJECTS
+      <h2 className={classNames(styles.projectsHeadline, styles.title)}>
+        Projects
       </h2>
       <ul className={styles.projectsContainer}>
         <li className={styles.projectContainer}>
@@ -121,13 +101,33 @@ const App: React.FC = () => {
           />
         </li>
       </ul>
-      <a
-        href="mailto:schachdavid@web.de"
-        className={classnames(styles.button, styles.contactMeButton)}
-      >
-        <FiMail />
-        <span>CONTACT ME</span>
-      </a>
+      <footer className={styles.footer}>
+        Got Interested? Get in Touch with Me:
+        <div className={styles.socialMediaFooter}>
+        <a
+          href="mailto:schachdavid@web.de"
+          className={styles.socialMediaLink}
+          aria-label="Send an Email"
+        >
+          <FiMessageSquare className={styles.icon} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/david-schach-668a22137/"
+          className={styles.socialMediaLink}
+          aria-label="View LinkedIn Profile"
+        >
+          <FiLinkedin className={styles.icon} />
+        </a>
+        <a
+          href="https://github.com/schachdavid"
+          className={styles.socialMediaLink}
+          aria-label="View Github Profile"
+        >
+          <FiGithub className={styles.icon} />
+        </a>
+        </div>
+       
+      </footer>
     </div>
   );
 };

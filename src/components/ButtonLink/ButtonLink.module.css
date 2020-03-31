@@ -1,21 +1,20 @@
+a {
+  display: block;
+}
+
 .button {
-    align-self: center;
-    margin: auto;
-    margin-bottom: 2rem;
-    border: 0.1rem solid black;
-    background-color: white;
-    color: black;
-    padding: 0.7rem 1rem;
-    cursor: pointer;
-    border-color: black;
-    border-radius: 0.7rem;
-    font-family: var(--primary-font), sans-serif;
-    font-size: 0.9rem;
-  }
-  
-  .button:hover {
-    background-color: black;
-    color: white;
-    transition: 0.3s;
-  
-  }
+  margin: auto;
+  background-color: white;
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  font-size: 0.9rem;
+  background-color: #1d3a64;
+  color: white;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: rgb(45, 65, 95);
+  transition: 0.3s;
+}
