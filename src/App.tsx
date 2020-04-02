@@ -18,6 +18,9 @@ const App: React.FC = () => {
 
   const imgHappy2Help = require("./images/happy2help.PNG");
   const imgDecisionMaker = require("./images/decision_maker.png");
+  const imgReactEventAgenda = require("./images/react-event-agenda.png");
+  const imgAgendaBuilder = require("./images/agenda-builder-add-in.png");
+
   const sketchSvg = require("./images/svgs/sketch.svg");
   const backgroundSvg = require("./images/svgs/background.svg");
 
@@ -101,12 +104,22 @@ const App: React.FC = () => {
         </li>
         <li className={styles.projectContainer}>
           <Project
-            title="Another Project"
-            description="Some Description."
-            codeUrl="https://github.com/schachdavid/decision-maker"
-            demoUrl="https://github.com/schachdavid/decision-maker"
-            img="https://github.com/schachdavid/decision-maker"
-            labels={[]}
+            title="React Event Agenda"
+            description="A reusable react component to plan an agenda for a meeting or event."
+            codeUrl="https://github.com/schachdavid/react-event-agenda"
+            demoUrl="https://schachdavid.github.io/react-event-agenda/"
+            img={imgReactEventAgenda}
+            labels={["React", "TypeScript", "MobX"]}
+          />
+        </li>
+        <li className={styles.projectContainer}>
+          <Project
+            title="Agenda Builder Add-In"
+            description="A decentralized Outlook Add-In to plan and share a meeting's or event's agenda directly into an e-mail."
+            codeUrl="https://github.com/schachdavid/agenda-builder-add-in"
+            demoUrl="https://github.com/schachdavid/agenda-builder-add-in#agenda-builder"
+            img={imgAgendaBuilder}
+            labels={["Office JS API", "React"]}
           />
         </li>
       </ul>

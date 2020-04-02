@@ -1,8 +1,9 @@
 .container {
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(240, 240, 240);
   border-radius: 0.5rem;
   display: inline;
   padding: 0.2rem 0.6rem;
   margin: 0.1rem;
   font-size: 0.8rem;
+  font-weight: 600;
 }
