@@ -1,0 +1,11 @@
+01001;Flensburg, kreisfreie Stadt;85942;87432;88519;89504;90164
+01002;Kiel, kreisfreie Stadt;246306;247441;247943;247548;246794
+
+
+
+void append(char*s, char c) {  
+     int len = strlen(s);
+     s[len] = c;
+     s[len+1] = '\0';
+     return 0;
+}
