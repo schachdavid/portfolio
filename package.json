@@ -7,7 +7,7 @@
     "gh-pages": "^2.0.1"
   },
   "scripts": {
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -b master -d dist"
   },
   "browserslist": {
     "production": [
